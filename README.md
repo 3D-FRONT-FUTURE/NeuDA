@@ -83,7 +83,7 @@ For examples, `./traineval.sh dtu_scan24 ./conf/neuda_womask.conf 1`
 
 The corresponding log can be found in `exp/<case_name>/<exp_name>/`.
 
-* Evaluation with [pretrained models]().
+* Evaluation with [pretrained models](https://drive.google.com/file/d/1dQWsKbSs4BhLUWB1BxrOWORJzoLAcYwh).
 ```shell
 $ python extract_mesh.py --case $case --conf $conf --eval_metric
 ```
