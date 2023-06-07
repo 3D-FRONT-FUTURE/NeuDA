@@ -1,6 +1,6 @@
 # NeuDA
 
-### [Project Page](https://3d-front-future.github.io/neuda) | [Paper](https://arxiv.org/pdf/2303.02375.pdf) | [Data]()
+### [Project Page](https://3d-front-future.github.io/neuda) | [Paper](https://arxiv.org/pdf/2303.02375.pdf) | [Data](https://drive.google.com/file/d/1dQWsKbSs4BhLUWB1BxrOWORJzoLAcYwh)
 
 ### Official Pytorch implemntation of the paper "NeuDA: Neural Deformable Anchor for High-Fidelity Implicit Surface Reconstruction", accepted to CVPR 2023.
 
@@ -8,7 +8,7 @@
 
 We presents **Deformable Anchors** representation approach and a simple **hierarchical position encoding** strategy. The former maintains learnable anchor points at verities to enhance the capability of neural implicit model in handling complicated geometric structures, and the latter explores complementaries of high-frequency and low-frequency geometry properties in the multi-level anchor grid structure.
 
-![](./assets/neuda_mesh.gif)
+https://github.com/3D-FRONT-FUTURE/NeuDA/assets/5526396/3a25e3eb-ea57-4831-bbbb-3280addb2ddb
 
 This repository implements the training / evaluation pipeline of our paper and provide a script to generate a textured mesh. Besides, based on reconstructed surface by NeuDA, we further adopt an **adversarial texture optimization** method to recover fine-detail texture.
 
@@ -90,7 +90,7 @@ $ python extract_mesh.py --case $case --conf $conf --eval_metric
 For examples, `python extract_mesh.py --case dtu_scan24 --conf ./conf/neuda_womask.conf --eval_metric`
 
 
-* [Optional] Given the reconstructed surface by NeuDA, training with adversarial texture optimization:
+* **[Optional]** Given the reconstructed surface by NeuDA, training with adversarial texture optimization:
 ```shell
 $ ./texture_opt.sh $case_name $conf $gpu_id [$in_mesh_path] [$out_mesh_path]
 ```
