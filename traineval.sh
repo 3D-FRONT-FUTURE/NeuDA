@@ -10,7 +10,7 @@ echo "RECONSTRUCT CASE: $case"
 echo "CONF: $conf" 
 echo "GPU_ID = $gpu_id"
 
-echo "python exp_runner.py --mode train --conf $conf --case $case"
+echo "python reconstruct_mesh.py --mode train --conf $conf --case $case"
 python reconstruct_mesh.py --mode train --conf $conf --case $case
 
 echo "python extract_mesh.py --conf $conf --case $case --eval_metric"
