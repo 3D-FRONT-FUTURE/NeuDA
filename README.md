@@ -29,6 +29,8 @@ For adversarial texture optimization, you need to install [Blender-3.4](https://
 Compile the cuda rendering and cpp libraries.
 
 ```shell
+$ sudo apt-get install libglm-dev libopencv-dev
+
 $ cd NeuDA/models/texture/Rasterizer
 $ ./compile.sh
 
