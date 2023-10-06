@@ -40,7 +40,7 @@ $ ./compile.sh
 
 ## Dataset 
 ### Public dataset
-* **DTU**: [data_DTU.zip](https://drive.google.com/drive/folders/1Nlzejs4mfPuJYORLbDEUDWlc9IZIbU0C) for training, [DTU Point Clouds](http://roboimagedata.compute.dtu.dk/?page_id=36) for evaluation.
+* **DTU**: [data_DTU.zip](https://www.dropbox.com/sh/w0y8bbdmxzik3uk/AAAaZffBiJevxQzRskoOYcyja?dl=0) for training, [DTU Point Clouds](http://roboimagedata.compute.dtu.dk/?page_id=36) for evaluation.
 
 ### Custom data
 #### Train NeuDA with your custom data:
@@ -75,13 +75,13 @@ Here the `cameras_sphere.npz` follows the data format in [IDR](https://github.co
 ```shell
 $ ./traineval.sh $case_name $conf $gpu_id
 ```
-For examples, `./traineval.sh dtu_scan24 ./conf/neuda_wmask.conf 1`
+For examples, `./traineval.sh dtu_scan24 ./confs/neuda_wmask.conf 1`
 
 * Training and evaluation without mask
 ```shell
 $ ./traineval.sh $case_name $conf $gpu_id
 ```
-For examples, `./traineval.sh dtu_scan24 ./conf/neuda_womask.conf 1`
+For examples, `./traineval.sh dtu_scan24 ./confs/neuda_womask.conf 1`
 
 The corresponding log can be found in `exp/<case_name>/<exp_name>/`.
 
@@ -89,14 +89,14 @@ The corresponding log can be found in `exp/<case_name>/<exp_name>/`.
 ```shell
 $ python extract_mesh.py --case $case --conf $conf --eval_metric
 ```
-For examples, `python extract_mesh.py --case dtu_scan24 --conf ./conf/neuda_womask.conf --eval_metric`
+For examples, `python extract_mesh.py --case dtu_scan24 --conf ./confs/neuda_womask.conf --eval_metric`
 
 
 * **[Optional]** Given the reconstructed surface by NeuDA, training with adversarial texture optimization:
 ```shell
 $ ./texture_opt.sh $case_name $conf $gpu_id [$in_mesh_path] [$out_mesh_path]
 ```
-For examples, `./texture_opt.sh dtu_scan24 ./conf/texture_opt.conf 1`
+For examples, `./texture_opt.sh dtu_scan24 ./confs/texture_opt.conf 1`
 
 
 ## Citation
